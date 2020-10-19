@@ -1,71 +1,39 @@
+<template>
+  <div id="app">
+    <Headers />
+    <Contents />
+    <Footers />
+  </div>
+</template>
 
-  
+<script>
+import Headers from './components/Headers';
+import Contents from './components/Contents';
+import Footers from './components/Footers';
+
+export default {
+  components: { Headers, Contents, Footers }
+}
 </script>
 
 <style>
-.header {
-  background-color: blanchedalmond;
-  
-  
-}
+  #app {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  #nav {
+    padding: 30px;
+  }
 
-.left_box{
-  float:left;
-  margin:0px 0px;
-}
-.right_box{
-  float:left;
-  
-  
-}
-.support-list ul{
-  list-style: none;
-  margin-bottom:0px;
-  margin-left:80px;
-}
-.support-list li{
-  float:left;
-  margin-right:40px;
-  
-  
-}
-.first{
-  margin-left:50px;
-}
-.search{
-  margin-left:80px;
-  
-}
-.sidebar-form{
-  height:30px;
-  
-}
-.button{
-  height:35px;
-  margin-right:15px;
-}
-.login-bar{
-  float:left;
-  margin-top:0px;
-}
-.search li{
-  float:left;
-  list-style:none;
-  
-}
-.left-bar{
- margin-top:0px;
-}
-.navi li{
- float:left;
- list-style:none;
- margin-right:60px;
- border-right:slategrey solid;
- background-color: steelblue;
- 
+  #nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
 
- 
-
-
-}
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
 </style>
