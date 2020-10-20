@@ -8,7 +8,7 @@
 
 <style scoped>
 .title {
-  padding: 32px;
+  
   border: 1px solid #ccc;
   background: red;
   font-size: 18px;
