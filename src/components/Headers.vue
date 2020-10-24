@@ -10,7 +10,7 @@
 .title {
   
   border: 1px solid #ccc;
-  background: red;
+  background:aqua;
   font-size: 18px;
 }
 </style>

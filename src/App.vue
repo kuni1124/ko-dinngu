@@ -14,6 +14,7 @@ import Footers from './components/Footers';
 export default {
   components: { Headers, Contents, Footers }
 }
+
 </script>
 
 <style>

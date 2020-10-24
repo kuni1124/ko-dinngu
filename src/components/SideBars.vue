@@ -40,17 +40,17 @@
 <style scoped>
 .box {
   display: flex;
-  width: 320px;
+  
 }
 .support-list ul{ 
   display: flex;
   list-style: none;
-  width: 800px;
+  
 }
 .search{ 
   display: flex;
   list-style: none;
-  width: 800px;
+ 
 }
 .search img{
   margin-left:10px;
@@ -62,5 +62,6 @@
 .login-bar{
   margin-left:100px;
 }
+
 
 </style>
