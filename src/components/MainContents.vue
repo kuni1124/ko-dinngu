@@ -53,7 +53,9 @@ export default {
       hoverFlag: false,
       hoverFlag2: false,
       message: 'hoverしてください',
+      
       };
+      
       
   },
   methods: {

@@ -2,6 +2,7 @@
      <div v-on:mouseover="mouseOverAction" v-on:mouseleave="mouseLeaveAction">{{name}}
      <p v-if="hoverFlag">hoverされました</p>
      </div>
+     
 </template>
 <script>
 

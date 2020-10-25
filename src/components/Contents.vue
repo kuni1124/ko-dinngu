@@ -28,6 +28,7 @@ export default {
   width:800px;
   text-align: center;
   margin:0 auto;
+ 
 
 }
 </style>

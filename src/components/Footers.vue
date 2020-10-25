@@ -4,7 +4,7 @@
     <div class="left-bar">
      <h4>お支払い方法について</h4>
      <p>
-      <a href="https://www.kitakaro.com/ext/support/index.html#creka">クレジットカード/</a><a href="https://www.kitakaro.com/ext/support/index.html#creka">コンビニ払い/</a><a href="https://www.kitakaro.com/ext/support/index.html#creka">代金引換</a>がございます。
+      <a href="">クレジットカード/</a><a href="">コンビニ払い/</a><a href="">代金引換</a>がございます。
      </p>
      <h4>送料について</h4>
      <p>お届け先１件ごとに送料を頂戴しております。<br>
@@ -64,14 +64,14 @@
 }
 .left-bar{
     text-align:left; 
-    width:400px;
+    width:300px;
     }
 .left-bar h4{
     border-bottom:dotted;
 }
 .right-bar{
     text-align:left;
-    width:400px;
+    width:350px;
 }
 .right-bar h4{
     border-bottom:dotted;

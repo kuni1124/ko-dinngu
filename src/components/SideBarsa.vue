@@ -13,47 +13,18 @@
           <div class="top">
             <img src="//dbcn1bdvswqbx.cloudfront.net/client_info/KITAKARO/view/userweb/images/button_top_page.gif?timestamp=1418273553000" width="209" height="40" alt="トップページへ">
           </div>
-        <div class="js-accordion" v-cloak>
-         <button class="js-accordion--trigger" type="button" :class="{ '_state-open': isOpened }" @click="accordionToggle()">
-           しいたけ
-           <!-- v-showは=の中身がtureだったら表示 !は反転-->
-          <span v-if="isOpened">-</span> 
-          <span v-else>+</span>
-         </button>
-           <!-- isOpened -->
-        <div class="js-accordion--target" :class="{ '_state-open': isOpened }" v-if="isOpened">
-         <div class="js-accordion--body">
+          <div class="menu">
            <ul>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-           </ul>    
-         </div>
-        </div>
-       </div>
-       <div class="js-accordion2" v-cloak>
-         <button class="js-accordion--trigger2" type="button" :class="{ '_state-open': isOpened2 }" @click="accordionToggle2()">
-           しいたけ
-           <!-- v-showは=の中身がtureだったら表示 !は反転-->
-          <span v-if="isOpened2">-</span> 
-          <span v-else>+</span>
-         </button>
-           <!-- isOpened -->
-        <div class="js-accordion--target2" :class="{ '_state-open': isOpened2 }" v-if="isOpened2">
-         <div class="js-accordion--body2">
-           <ul>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-           </ul>    
-         </div>
-        </div>
+            <li ><HogeHoge name="しいたけ"></HogeHoge></li>
+            <li ><HogeHoge name="しいたけ"></HogeHoge></li>
+            <li><HogeHoge name="しいたけ"></HogeHoge></li>
+            
+           </ul>
+          </div>
+          
+           
+         
+        
         <div class="insta">
           <img src="@/assets/inn.jpeg">
           <p>Instagramはこちら</p>
@@ -62,23 +33,34 @@
           <img src="@/assets/twitter.jpeg">
           <p>twitterはこちら</p>
         </div> 
-       </div>
        
           
       </div>
       <div class="right-bars">
         <div class="osirase">
-         <img src="//dbcn1bdvswqbx.cloudfront.net/client_info/KITAKARO/view/userweb/images/top_title_topics.gif?timestamp=1418273553000" width="677" height="42" alt="トピックス｜TOPICS">
-      
-         <h3>[2020/10/19]※終了しました。[しいたけ]</h3>
-         <h3>[2020/10/19]※終了しました。[しいたけ]</h3>
-         <h3>[2020/10/19]※終了しました。[しいたけ]</h3>
-         <h3>[2020/10/19]※終了しました。[しいたけ]</h3>
+         <div class="hogehoge"> 
+         <img class="uuu" src="//dbcn1bdvswqbx.cloudfront.net/client_info/KITAKARO/view/userweb/images/top_title_topics.gif?timestamp=1418273553000">
+         
+         <div class="comennt-box">
+          <p>[2020/10/19]※終了しました。[しいたけ]</p>
+         </div>
+         <div class="comennt-box">
+          <p>[2020/10/19]※終了しました。[しいたけ]</p>
+         </div>
+         <div class="comennt-box">
+          <p>[2020/10/19]※終了しました。[しいたけ]</p>
+         </div>
+         <div class="comennt-box">
+          <p>[2020/10/19]※終了しました。[しいたけ]</p>
+         </div>
+         <div class="comennt-box">
+          <p>自信を持っておすすめする自慢</p>
+         </div>
+         </div>
         </div>
         <div class="inner"> 
-          <p>自信を持っておすすめする自慢</p>
           <h1>人気おすすめ商品</h1>
-         <div class="box"> 
+         <div class="hako">
            <div class="setumei">
             <img src="@/assets//20200218_131059_002.jpg"/>
             <p>しいたけ</p>
@@ -89,7 +71,7 @@
             <p>しいたけ</p>
             <p>地下水で組み上げた極上のしいたけを是非ご賞味してくだい。</p>
            </div>
-        </div> 
+         </div> 
         <div class="img-box">
           <div class="hoge">
            <img class="first" src="@/assets//20200829_184219.jpg">
@@ -106,17 +88,20 @@
          </div>
         </div>
        </div>
-        
-      </div >
+       </div> 
+      
       
   </div>
 </template>
 <script>
 
- 
 
+import HogeHoge from './HogeHoge';
 export default {
-  
+  components: {
+   
+    HogeHoge,
+  },
   data() {
     return {
       isOpened: false,
@@ -151,20 +136,47 @@ export default {
 }
 .second-main {
   display: flex;
-  width: 800px;
+ 
   margin:0 auto;
 }
-.right-bars h3{
- border-bottom:1px solid;
+
+.left-bars{
+  flex:1;
 }
-.box{
+.right-bars{
+   justify-content: space-between;
+ 
+
+  
+}
+.hogehoge{
+  width:80%;
+  margin-left:10px;
+  width: 580px;
+}
+
+  
+.comennt-box{
+ border-bottom:1px solid;
+ height: 20px;
+}
+.right-bars p{
+ 
+ text-align: left;
+ margin-left:10px;
+ 
+}
+
+.hako{
   display: flex;
+  
+
+}
+.setumei2{
+  text-align: right;
 }
   
-.box img{
-  width:300px;
-  height:200px;
-}
+
 .first{
   width:300px;
   height:150px;
@@ -216,8 +228,8 @@ export default {
 .osirase{
   width:590px;
 }
-.osirase img{
-  width:590px;
+.uuu{
+  width:580px;
 }
 .setumei img{
   width: 280px;
@@ -244,5 +256,8 @@ export default {
 }
 .twitter p{
   margin-top:0px;
+}
+.menu ul{
+  list-style: none;
 }
 </style>
