@@ -29,10 +29,7 @@
       <h3>umekikunihiko</h3>  
     </div>
    
-    <div class="container">
-            <p v-on:mouseover="mouseOverAction" v-on:mouseleave="mouseLeaveAction">{{message}}</p>
-            <p v-if="hoverFlag">hoverされました</p>
-    </div> 
+    
   
  </div>    
 </template>

@@ -3,7 +3,6 @@
     <SideBars />
     <MainContents />
     <SideBarsa />
-    
    
     
    
@@ -13,7 +12,6 @@
 import MainContents from './MainContents';
 import SideBars from './SideBars';
 import SideBarsa from './SideBarsa';
-
 
 export default {
   components: { MainContents, SideBars, SideBarsa, },

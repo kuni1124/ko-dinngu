@@ -15,9 +15,9 @@
           </div>
           <div class="menu">
            <ul>
-            <li ><HogeHoge name="しいたけ"></HogeHoge></li>
-            <li ><HogeHoge name="しいたけ"></HogeHoge></li>
-            <li><HogeHoge name="しいたけ"></HogeHoge></li>
+            <li ><HogeHoge name="しいたけ" :list='list1'></HogeHoge></li>
+            <li ><HogeHoge name="干し" :list='list2'></HogeHoge></li>
+           
             
            </ul>
           </div>
@@ -105,7 +105,9 @@ export default {
   data() {
     return {
       isOpened: false,
-      isOpened2:false,
+      isOpened2:false, 
+      list1:['aaa','bbb','ccc'],
+      list2:['aaaa','bbbb','cccc']
       };
       
   },

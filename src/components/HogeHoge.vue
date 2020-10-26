@@ -10,34 +10,13 @@
         <div class="js-accordion--target" :class="{ '_state-open': isOpened }" v-if="isOpened">
          <div class="js-accordion--body">
            <ul>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
+             <li v-for="str in list" :key="str">{{ str }}</li>
            </ul>    
          </div>
         </div>
-        <button class="js-accordion--trigger" type="button" :class="{ '_state-open': isOpened2 }" @click="accordionToggl()">{{name}}
-           
-           <!-- v-showは=の中身がtureだったら表示 !は反転-->
-          <span v-if="isOpened2">-</span> 
-          <span v-else>+</span>
-         </button>
-           <!-- isOpened -->
-        <div class="js-accordion--target" :class="{ '_state-open': isOpened2 }" v-if="isOpened2">
-         <div class="js-accordion--body">
-           <ul>
-             <li>bbb</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-             <li>aaa</li>
-           </ul>    
-         </div>
-        </div>
+        
+         
+      
        </div>
        
        
@@ -49,7 +28,7 @@ export default {
     
    
   },
-  props: ['name'],
+  props: ['name','list'],
   data() {
     return {
       isOpened: false,
