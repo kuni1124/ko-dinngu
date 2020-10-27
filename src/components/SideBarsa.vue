@@ -13,14 +13,48 @@
           <div class="top">
             <img src="//dbcn1bdvswqbx.cloudfront.net/client_info/KITAKARO/view/userweb/images/button_top_page.gif?timestamp=1418273553000" width="209" height="40" alt="トップページへ">
           </div>
-          <div class="menu">
-           <ul>
-            <li ><HogeHoge name="しいたけ" :list='list1'></HogeHoge></li>
-            <li ><HogeHoge name="干し" :list='list2'></HogeHoge></li>
+          <div class="js-accordion" v-cloak>
+         <button class="js-accordion--trigger" type="button" :class="{ '_state-open': isOpened }" @click="accordionToggle()">しいたけ
            
-            
-           </ul>
-          </div>
+           <!-- v-showは=の中身がtureだったら表示 !は反転-->
+          <span v-if="isOpened">-</span> 
+          <span v-else>+</span>
+         </button>
+           <!-- isOpened -->
+         
+        <div class="js-accordion--target" :class="{ '_state-open': isOpened }" v-if="isOpened">
+         <div class="js-accordion--body">
+          
+          <ul>
+           <li v-for="item in items" :key = 'item'>
+            <a v-bind:href="item.url" target="_blank">{{ item.text }}</a>
+           </li>
+         </ul> 
+         </div>
+        </div> 
+        </div> 
+         <div class="js-accordion" v-cloak>
+         <button class="js-accordion--trigger" type="button" :class="{ '_state-open': isOpened2 }" @click="accordionToggle2()">干ししいたけ
+           
+           <!-- v-showは=の中身がtureだったら表示 !は反転-->
+          <span v-if="isOpened2">-</span> 
+          <span v-else>+</span>
+         </button>
+           <!-- isOpened -->
+         
+        <div class="js-accordion--target" :class="{ '_state-open': isOpened2 }" v-if="isOpened2">
+         <div class="js-accordion--body">
+          
+          <ul>
+           <li v-for="item in items2" :key = 'item'>
+            <a v-bind:href="item.url" target="_blank">{{ item.text }}</a>
+           </li>
+         </ul> 
+         </div>
+        </div> 
+        </div> 
+      
+       
           
            
          
@@ -96,19 +130,40 @@
 <script>
 
 
-import HogeHoge from './HogeHoge';
+//import HogeHoge from './HogeHoge';
 export default {
   components: {
    
-    HogeHoge,
+    //HogeHoge,
   },
   data() {
     return {
       isOpened: false,
+      items:[
+          {
+            url: 'http://www.google.com/',
+            text: 'google'
+          },
+          {
+            url: 'http://www.yahoo.co.jp/',
+            text: 'yahoo'
+          }
+        ],
       isOpened2:false, 
-      list1:['aaa','bbb','ccc'],
-      list2:['aaaa','bbbb','cccc']
+       items2:[
+          {
+            url: 'http://www.google.com/',
+            text: 'google'
+          },
+          {
+            url: 'http://www.yahoo.co.jp/',
+            text: 'yahoo'
+          }
+        ],
+      
+        
       };
+      
       
   },
   methods: {

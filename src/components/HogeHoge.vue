@@ -1,5 +1,5 @@
 <template>
-     <div class="js-accordion" v-cloak>
+      <div class="js-accordion" v-cloak>
          <button class="js-accordion--trigger" type="button" :class="{ '_state-open': isOpened }" @click="accordionToggle()">{{name}}
            
            <!-- v-showは=の中身がtureだったら表示 !は反転-->
@@ -10,10 +10,11 @@
         <div class="js-accordion--target" :class="{ '_state-open': isOpened }" v-if="isOpened">
          <div class="js-accordion--body">
            <ul>
-             <li v-for="str in list" :key="str">{{ str }}</li>
+             <li v-for="str in items" :key="str">{{ str }}</li>
+            
            </ul>    
          </div>
-        </div>
+        </div> 
         
          
       
@@ -28,7 +29,7 @@ export default {
     
    
   },
-  props: ['name','list'],
+  props: ['name','items',],
   data() {
     return {
       isOpened: false,
